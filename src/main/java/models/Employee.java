@@ -39,7 +39,7 @@ import lombok.Setter;
 
 
 @Getter //全てのクラスフィールドについてgetterを自動生成する(Lombok)
-@Setter //全てのクラスフィールドについてgetterを自動生成する(Lombok)
+@Setter //全てのクラスフィールドについてsetterを自動生成する(Lombok)
 @NoArgsConstructor //引数なしコンストラクタを自動生成する(Lombok)
 @AllArgsConstructor //全てのクラスフィールドを引数に持つ引数ありコンストラクタを自動生成する(Lombok)
 @Entity
@@ -80,7 +80,7 @@ public class Employee {
     //更新日時
 
     @Column(name = JpaConst.EMP_COL_UPDATED_AT, nullable = false)
-    private LocalDateTime updateAt;
+    private LocalDateTime updatedAt;
 
     //削除された従業員か(現役:0,削除済み:1)
     @Column(name = JpaConst.EMP_COL_DELETE_FLAG, nullable = false)

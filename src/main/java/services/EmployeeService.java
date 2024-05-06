@@ -9,7 +9,7 @@ import actions.views.EmployeeConverter;
 import actions.views.EmployeeView;
 import constants.JpaConst;
 import models.Employee;
-import models.validator.EmployeeValidator;
+import models.validators.EmployeeValidator;
 import utils.EncryptUtil;
 
 //従業員テーブルの操作に関わる処理を行うクラス
@@ -43,7 +43,7 @@ public class EmployeeService extends ServiceBase {
 
     /**社員番号、パスワードを条件に取得したデータをEmployeeViewのインスタンスで返却する
      * @param code 社員番号
-     * @param planPass パスワード文字列
+     * @param plainPass パスワード文字列
      * @param pepper pepper 文字列
      * @return 取得データのインスタンス、取得できない場合null
      */

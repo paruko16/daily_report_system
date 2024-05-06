@@ -1,4 +1,4 @@
-package models.validator;
+package models.validators;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public class EmployeeValidator {
      * @return エラーメッセージ
      */
 
-    public static String validateCode(EmployeeService service,String code,Boolean codeDuplicateCheckFlag) {
+    private static String validateCode(EmployeeService service,String code,Boolean codeDuplicateCheckFlag) {
 
         //入力値がなければエラーメッセージを返却
         if(code == null || code.equals("")) {

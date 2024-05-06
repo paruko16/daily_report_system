@@ -16,7 +16,7 @@ import constants.ForwardConst;
 import constants.PropertyConst;
 
 
-//各Actionクラスの親クラス。共同処理を行う。
+//各Actionクラスの親クラス。共通処理を行う。
 public abstract class ActionBase {
     protected ServletContext context;
     protected HttpServletRequest request;
@@ -24,7 +24,7 @@ public abstract class ActionBase {
 
     /*
      * 初期化処理
-     * サーブレットコンテキスト、リクエスト、レスポンスをクラスフィールドに設置
+     * サーブレットコンテキスト、リクエスト、レスポンスをクラスフィールドに設定
      * @param servletContext
      * @param servletRequest
      * @param servletResponse
@@ -144,8 +144,8 @@ public abstract class ActionBase {
 
 
      /*
-      * リクエスト殻結果を要求されているページ数を取得し、返却する
-      * @return 要求されているページ数(要素がない場合は1)
+      * リクエストから表示を要求されているページ数を取得し、返却する
+      * @return 要求されているページ数(要求がない場合は1)
       */
      protected int getPage() {
          int page;
@@ -189,7 +189,7 @@ public abstract class ActionBase {
      /*
       * リクエストパラメータから引数で指定したパラメータ名の値を返却する
       * @param key パラメータ名
-      * @return パラメータの値
+      * @return パラメータ値
       */
      protected String getRequestParam(AttributeConst key) {
          return request.getParameter(key.getValue());
